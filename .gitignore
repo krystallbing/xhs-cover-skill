@@ -1,0 +1,6 @@
+config.md
+assets/my-face.*
+.DS_Store
+
+# Local identity assets, cover history, feedback and personal preferences
+/private/
