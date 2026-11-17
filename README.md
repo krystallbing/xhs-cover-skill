@@ -177,24 +177,7 @@ Krystal Cover Design 将封面创意、视觉生成、质量检查和历史经�
 
 Skill 通过两条相互关联的反馈循环，完成当前任务的质量控制，并为后续任务积累设计经验。
 
-```mermaid
-flowchart TB
-    subgraph A["循环 A｜当前封面的质量改进"]
-        direction LR
-        A1["生成"] --> A2["检查"] --> A3["交付候选"]
-        A2 -->|需要修正| A4["修正"] --> A2
-    end
-    subgraph B["循环 B｜跨任务的经验复用"]
-        direction LR
-        B1["保存记录"] --> B2["读取经验"] --> B3["辅助新设计"]
-    end
-    A3 -.-> B1
-    B3 -.-> A1
-    classDef current fill:#eaf2ff,stroke:#7a9ccd,color:#243b60
-    classDef history fill:#fff4dc,stroke:#d2aa62,color:#584526
-    class A1,A2,A3,A4 current
-    class B1,B2,B3 history
-```
+![双循环设计机制](assets/krystal-cover-dual-loop.svg)
 
 **循环 A｜当前任务的质量改进**
 

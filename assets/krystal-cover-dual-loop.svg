@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="600" viewBox="0 0 1280 600" role="img" aria-labelledby="title desc">
+  <title id="title">Krystal Cover Design 双循环设计机制</title>
+  <desc id="desc">循环 A 为当前任务的封面质量改进：生成封面、AI 逐张检查、交付候选并选择精修；发现问题时尝试修正，再返回检查。循环 B 为跨任务的经验复用：保存作品、检查和反馈记录，读取相关历史及长期偏好，辅助下一次封面设计。两条循环通过创作记录相连。</desc>
+  <defs>
+    <linearGradient id="canvas" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#F9FAFE"/>
+      <stop offset="1" stop-color="#F5F8FC"/>
+    </linearGradient>
+    <filter id="soft-shadow" x="-10%" y="-20%" width="120%" height="150%">
+      <feDropShadow dx="0" dy="7" stdDeviation="12" flood-color="#1D2A48" flood-opacity=".06"/>
+    </filter>
+    <marker id="arrow-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#6577D8"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2A9D84"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="600" fill="url(#canvas)"/>
+  <g font-family="Noto Sans CJK SC, PingFang SC, Microsoft YaHei, sans-serif">
+    <text x="42" y="61" font-size="32" font-weight="700" fill="#202A41">双循环设计机制</text>
+    <text x="44" y="94" font-size="16" fill="#69768C">一次创作中持续检查与修正，下一次创作中复用已积累的设计经验</text>
+
+    <!-- Loop A: current task -->
+    <rect x="40" y="125" width="583" height="410" rx="22" fill="#FFFFFF" stroke="#DCE5FA" stroke-width="1.5" filter="url(#soft-shadow)"/>
+    <rect x="42" y="127" width="579" height="82" rx="20" fill="#EEF2FF"/>
+    <path d="M 42 188 H 621 V 207 H 42 Z" fill="#EEF2FF"/>
+    <circle cx="78" cy="164" r="19" fill="#536BCA"/>
+    <text x="78" y="170" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">A</text>
+    <text x="110" y="161" font-size="23" font-weight="700" fill="#263F91">当前任务 · 质量改进</text>
+    <text x="110" y="190" font-size="14" fill="#657299">生成之后主动查验，遇到明确问题则尝试修正</text>
+
+    <g fill="#F6F8FF" stroke="#BCCBF5" stroke-width="1.5">
+      <rect x="68" y="244" width="143" height="64" rx="12"/>
+      <rect x="264" y="244" width="149" height="64" rx="12"/>
+      <rect x="466" y="244" width="132" height="64" rx="12"/>
+    </g>
+    <g font-size="18" font-weight="650" text-anchor="middle" fill="#283A69">
+      <text x="139.5" y="284">生成封面</text>
+      <text x="338.5" y="284">AI 逐张检查</text>
+      <text x="532" y="273">交付候选</text>
+      <text x="532" y="297" font-size="15" font-weight="500" fill="#657299">用户选择与精修</text>
+    </g>
+    <path d="M 213 276 H 259" fill="none" stroke="#6577D8" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+    <path d="M 415 276 H 461" fill="none" stroke="#6577D8" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+
+    <rect x="264" y="380" width="149" height="65" rx="12" fill="#E9EEFF" stroke="#91A3E9" stroke-width="1.5"/>
+    <text x="338.5" y="406" font-size="17" font-weight="650" text-anchor="middle" fill="#324F9E">针对问题</text>
+    <text x="338.5" y="430" font-size="17" font-weight="650" text-anchor="middle" fill="#324F9E">尝试修正</text>
+    <path d="M 339 311 V 376" fill="none" stroke="#6577D8" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+    <text x="355" y="352" font-size="13" fill="#6474B2">发现问题</text>
+    <path d="M 262 411 H 238 Q 227 411 227 400 V 326 Q 227 313 240 313 H 261" fill="none" stroke="#6577D8" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow-blue)"/>
+    <text x="145" y="372" font-size="13" fill="#6474B2">修正后复查</text>
+
+    <rect x="68" y="475" width="526" height="39" rx="10" fill="#F4F6FC"/>
+    <circle cx="90" cy="494.5" r="4" fill="#536BCA"/>
+    <text x="105" y="500" font-size="13" fill="#5B6880">首次交付前，每张最多自动修正 2 轮；未解决的问题如实说明</text>
+
+    <!-- Loop B: cross-task reuse -->
+    <rect x="657" y="125" width="583" height="410" rx="22" fill="#FFFFFF" stroke="#D7EEE5" stroke-width="1.5" filter="url(#soft-shadow)"/>
+    <rect x="659" y="127" width="579" height="82" rx="20" fill="#E9F8F2"/>
+    <path d="M 659 188 H 1238 V 207 H 659 Z" fill="#E9F8F2"/>
+    <circle cx="695" cy="164" r="19" fill="#239C7D"/>
+    <text x="695" y="170" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">B</text>
+    <text x="727" y="161" font-size="23" font-weight="700" fill="#176E5B">跨任务 · 经验复用</text>
+    <text x="727" y="190" font-size="14" fill="#547F74">保存真实记录，让下一次设计有经验可参考</text>
+
+    <g fill="#F2FBF7" stroke="#ACDECF" stroke-width="1.5">
+      <rect x="684" y="244" width="151" height="64" rx="12"/>
+      <rect x="869" y="244" width="151" height="64" rx="12"/>
+      <rect x="1054" y="244" width="151" height="64" rx="12"/>
+    </g>
+    <g text-anchor="middle" font-size="17" font-weight="650" fill="#195D4F">
+      <text x="759.5" y="272">保存作品</text>
+      <text x="759.5" y="295">检查与反馈</text>
+      <text x="944.5" y="272">读取相关历史</text>
+      <text x="944.5" y="295">及长期偏好</text>
+      <text x="1129.5" y="272">辅助下一次</text>
+      <text x="1129.5" y="295">封面设计</text>
+    </g>
+    <path d="M 838 276 H 865" fill="none" stroke="#2A9D84" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow-green)"/>
+    <path d="M 1023 276 H 1050" fill="none" stroke="#2A9D84" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow-green)"/>
+
+    <path d="M 1130 311 V 399 Q 1130 412 1117 412 H 772 Q 760 412 760 399 V 311" fill="none" stroke="#2A9D84" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow-green)"/>
+    <rect x="846" y="385" width="206" height="39" rx="19.5" fill="#FFFFFF" stroke="#CEEEE4"/>
+    <text x="949" y="410" font-size="14" text-anchor="middle" fill="#377F70">新任务继续积累经验</text>
+
+    <rect x="684" y="475" width="526" height="39" rx="10" fill="#F0F9F5"/>
+    <circle cx="706" cy="494.5" r="4" fill="#239C7D"/>
+    <text x="721" y="500" font-size="13" fill="#54766D">历史用于设计参考，不会自动训练图像模型</text>
+
+    <!-- A-to-B relationship: output is recorded for future work -->
+    <path d="M 599 276 H 679" fill="none" stroke="#799AAB" stroke-width="2.5" stroke-dasharray="5 6" marker-end="url(#arrow-green)"/>
+    <rect x="615" y="246" width="53" height="20" rx="10" fill="#FFFFFF" stroke="#D7E0EB"/>
+    <text x="641.5" y="260.5" text-anchor="middle" font-size="11" font-weight="600" fill="#66768C">留存</text>
+
+    <text x="640" y="574" font-size="15" text-anchor="middle" fill="#728099">两条循环相互连接：当前任务改进质量，历史记录辅助未来创作</text>
+  </g>
+</svg>
